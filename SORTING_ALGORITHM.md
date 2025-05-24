@@ -109,7 +109,7 @@ def insertion_sort(arr):
 
 ### 1. Merge Sort (Sắp xếp trộn)
 
-**Ý tưởng**: Áp dụng chiến lược "chia để trị" - chia mảng thành các phần nhỏ, sắp xếp từng phần rồi trộn lại.
+**Ý tưởng**: Áp dụng chiến lược "chia để trị" (divide and conquer) - chia mảng thành các phần nhỏ, sắp xếp từng phần rồi trộn lại.
 
 **Cách hoạt động**: Chia mảng làm đôi đến khi chỉ còn 1 phần tử, sau đó trộn các mảng con đã sắp xếp.
 
@@ -153,7 +153,7 @@ def merge(left, right):
 
 ### 2. Quick Sort (Sắp xếp nhanh)
 
-**Ý tưởng**: Chọn một phần tử làm "pivot", sắp xếp sao cho các phần tử nhỏ hơn ở bên trái, lớn hơn ở bên phải.
+**Ý tưởng**: Chọn một phần tử làm "phần tử chốt" (pivot), sắp xếp sao cho các phần tử nhỏ hơn ở bên trái, lớn hơn ở bên phải.
 
 **Cách hoạt động**: Phân hoạch mảng quanh pivot, sau đó đệ quy sắp xếp các phần.
 
@@ -343,7 +343,7 @@ def counting_sort_for_radix(arr, exp):
 
 ### 3. Bucket Sort (Sắp xếp thùng)
 
-**Ý tưởng**: Phân phối các phần tử vào nhiều "thùng", sắp xếp từng thùng rồi kết hợp lại.
+**Ý tưởng**: Phân phối các phần tử vào nhiều "thùng" (bucket), sắp xếp từng thùng rồi kết hợp lại.
 
 **Áp dụng**: Hiệu quả khi dữ liệu phân bố đều.
 
@@ -410,11 +410,13 @@ def bucket_sort(arr):
 ## V. TIPS VÀ THỰC HÀNH
 
 ### Câu hỏi Tự kiểm tra
+
 1. Tại sao Quick Sort lại nhanh hơn Merge Sort trong thực tế dù cùng độ phức tạp O(n log n)?
 2. Khi nào nên sử dụng thuật toán sắp xếp không so sánh (Counting, Radix, Bucket)?
 3. Thuật toán nào phù hợp nhất để sắp xếp danh sách gần như đã được sắp xếp?
 
 ### Bài tập Thực hành
+
 - Cài đặt các thuật toán cơ bản bằng tay
 - So sánh thời gian chạy thực tế với các bộ dữ liệu khác nhau
 - Tối ưu hóa Quick Sort bằng cách chọn pivot thông minh
