@@ -4,8 +4,7 @@
 
 **Độ phức tạp (complexity) của thuật toán sắp xếp là gì?** Tham khảo Big O Notation.
 
-**Tính ổn định (stability) của thuật toán sắp xếp là gì?**
-Tính ổn định của thuật toán sắp xếp là khả năng duy trì thứ tự tương đối ban đầu của các phần tử có giá trị bằng nhau sau khi sắp xếp.
+**Tính ổn định (stability) của thuật toán sắp xếp là gì?** Là khả năng duy trì thứ tự tương đối ban đầu của các phần tử có giá trị bằng nhau sau khi sắp xếp.
 
 Thuật toán ổn định: Nếu có hai phần tử A và B có cùng giá trị, và A xuất hiện trước B trong mảng gốc, thì sau khi sắp xếp A vẫn sẽ xuất hiện trước B.
 
@@ -16,6 +15,15 @@ Ví dụ minh họa: Mảng ban đầu: [(3,a), (1,b), (3,c), (2,d)] (số là g
 
 **Tại sao tính ổn định quan trọng?**
 Khi sắp xếp theo nhiều tiêu chí (ví dụ: sắp xếp danh sách sinh viên theo điểm, nhưng muốn giữ thứ tự alphabet cho những sinh viên cùng điểm), tính ổn định giúp đảm bảo kết quả sắp xếp nhất quán và có thể dự đoán được.
+
+**Trường hợp xấu nhất và tốt nhất về độ phức tạp là gì?** Mô tả hiệu suất của thuật toán trong các tình huống khác nhau của dữ liệu đầu vào.
+
+* Trường hợp tốt nhất (Best Case): Là tình huống dữ liệu đầu vào thuận lợi nhất, khiến thuật toán thực hiện với số bước ít nhất có thể.
+* Trường hợp xấu nhất (Worst Case): Là tình huống dữ liệu đầu vào bất lợi nhất, khiến thuật toán phải thực hiện nhiều bước nhất.
+* Tại sao quan trọng? Khi thiết kế hệ thống, thường ưu tiên tối ưu worst case để đảm bảo độ tin cậy.
+  * Worst case: Giúp đảm bảo thuật toán không vượt quá giới hạn thời gian cho phép
+  * Best case: Giúp tối ưu hóa cho các tình huống đặc biệt
+  * Average case: Phản ánh hiệu suất thực tế trong hầu hết trường hợp
 
 ## I. THUẬT TOÁN SẮP XẾP CƠ BẢN
 
