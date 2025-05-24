@@ -1,4 +1,21 @@
-# Tổng hợp Thuật toán Sắp xếp - Từ Cơ bản đến Nâng cao
+# Sorting Algorithms - Basic to Advance
+
+## FAQs
+
+**Độ phức tạp (complexity) của thuật toán sắp xếp là gì?** Tham khảo Big O Notation.
+
+**Tính ổn định (stability) của thuật toán sắp xếp là gì?**
+Tính ổn định của thuật toán sắp xếp là khả năng duy trì thứ tự tương đối ban đầu của các phần tử có giá trị bằng nhau sau khi sắp xếp.
+
+Thuật toán ổn định: Nếu có hai phần tử A và B có cùng giá trị, và A xuất hiện trước B trong mảng gốc, thì sau khi sắp xếp A vẫn sẽ xuất hiện trước B.
+
+Ví dụ minh họa: Mảng ban đầu: [(3,a), (1,b), (3,c), (2,d)] (số là giá trị so sánh, chữ cái là định danh)
+
+* Sắp xếp ổn định: [(1,b), (2,d), (3,a), (3,c)] - thứ tự a trước c được giữ nguyên
+* Sắp xếp không ổn định: [(1,b), (2,d), (3,c), (3,a)] - thứ tự a và c bị đảo ngược
+
+**Tại sao tính ổn định quan trọng?**
+Khi sắp xếp theo nhiều tiêu chí (ví dụ: sắp xếp danh sách sinh viên theo điểm, nhưng muốn giữ thứ tự alphabet cho những sinh viên cùng điểm), tính ổn định giúp đảm bảo kết quả sắp xếp nhất quán và có thể dự đoán được.
 
 ## I. THUẬT TOÁN SẮP XẾP CƠ BẢN
 
@@ -27,9 +44,9 @@ def bubble_sort(arr):
 # Ví dụ: [64, 34, 25, 12, 22, 11, 90] → [11, 12, 22, 25, 34, 64, 90]
 ```
 
-**Độ phức tạp**: O(n²) - không phù hợp với dữ liệu lớn
-**Ưu điểm**: Đơn giản, ổn định (giữ nguyên thứ tự các phần tử bằng nhau)
-**Nhược điểm**: Chậm với dữ liệu lớn
+* **Độ phức tạp**: O(n²) - không phù hợp với dữ liệu lớn
+* **Ưu điểm**: Đơn giản, ổn định (giữ nguyên thứ tự các phần tử bằng nhau)
+* **Nhược điểm**: Chậm với dữ liệu lớn
 
 ### 2. Selection Sort (Sắp xếp chọn)
 
@@ -54,9 +71,10 @@ def selection_sort(arr):
 # Ví dụ: [64, 25, 12, 22, 11] → [11, 12, 22, 25, 64]
 ```
 
-**Độ phức tạp**: O(n²) - ít hoán đổi hơn Bubble Sort
-**Ưu điểm**: Số lần hoán đổi tối thiểu
-**Nhược điểm**: Không ổn định, chậm với dữ liệu lớn
+* **Độ phức tạp**: O(n²) - ít hoán đổi hơn Bubble Sort
+* **Ưu điểm**: Số lần hoán đổi tối thiểu
+
+* **Nhược điểm**: Không ổn định, chậm với dữ liệu lớn
 
 ### 3. Insertion Sort (Sắp xếp chèn)
 
@@ -83,9 +101,9 @@ def insertion_sort(arr):
 # Ví dụ: [5, 2, 4, 6, 1, 3] → [1, 2, 3, 4, 5, 6]
 ```
 
-**Độ phức tạp**: O(n²) trường hợp xấu, O(n) trường hợp tốt
-**Ưu điểm**: Hiệu quả với dữ liệu nhỏ hoặc gần như đã sắp xếp, ổn định
-**Nhược điểm**: Kém hiệu quả với dữ liệu lớn
+* **Độ phức tạp**: O(n²) trường hợp xấu, O(n) trường hợp tốt
+* **Ưu điểm**: Hiệu quả với dữ liệu nhỏ hoặc gần như đã sắp xếp, ổn định
+* **Nhược điểm**: Kém hiệu quả với dữ liệu lớn
 
 ## II. THUẬT TOÁN SẮP XẾP HIỆU QUẢ
 
@@ -129,9 +147,9 @@ def merge(left, right):
 # Ví dụ: [38, 27, 43, 3, 9, 82, 10] → [3, 9, 10, 27, 38, 43, 82]
 ```
 
-**Độ phức tạp**: O(n log n) - rất ổn định
-**Ưu điểm**: Hiệu suất ổn định, ổn định, phù hợp với dữ liệu lớn
-**Nhược điểm**: Cần thêm bộ nhớ O(n)
+* **Độ phức tạp**: O(n log n) - rất ổn định
+* **Ưu điểm**: Hiệu suất ổn định, ổn định, phù hợp với dữ liệu lớn
+* **Nhược điểm**: Cần thêm bộ nhớ O(n)
 
 ### 2. Quick Sort (Sắp xếp nhanh)
 
@@ -172,9 +190,9 @@ def partition(arr, low, high):
 # Ví dụ: [10, 7, 8, 9, 1, 5] → [1, 5, 7, 8, 9, 10]
 ```
 
-**Độ phức tạp**: O(n log n) trung bình, O(n²) trường hợp xấu
-**Ưu điểm**: Nhanh trong thực tế, sắp xếp tại chỗ
-**Nhược điểm**: Không ổn định, hiệu suất phụ thuộc vào việc chọn pivot
+* **Độ phức tạp**: O(n log n) trung bình, O(n²) trường hợp xấu
+* **Ưu điểm**: Nhanh trong thực tế, sắp xếp tại chỗ
+* **Nhược điểm**: Không ổn định, hiệu suất phụ thuộc vào việc chọn pivot
 
 ### 3. Heap Sort (Sắp xếp đống)
 
@@ -222,9 +240,9 @@ def heapify(arr, n, i):
 # Ví dụ: [12, 11, 13, 5, 6, 7] → [5, 6, 7, 11, 12, 13]
 ```
 
-**Độ phức tạp**: O(n log n) - ổn định
-**Ưu điểm**: Hiệu suất ổn định, sắp xếp tại chỗ
-**Nhược điểm**: Không ổn định, phức tạp để cài đặt
+* **Độ phức tạp**: O(n log n) - ổn định
+* **Ưu điểm**: Hiệu suất ổn định, sắp xếp tại chỗ
+* **Nhược điểm**: Không ổn định, phức tạp để cài đặt
 
 ## III. THUẬT TOÁN SẮP XẾP ĐẶC BIỆT
 
@@ -266,9 +284,9 @@ def counting_sort(arr):
 # Ví dụ: [4, 2, 2, 8, 3, 3, 1] → [1, 2, 2, 3, 3, 4, 8]
 ```
 
-**Độ phức tạp**: O(n + k) với k là phạm vi giá trị
-**Ưu điểm**: Rất nhanh khi phạm vi giá trị nhỏ, ổn định
-**Nhược điểm**: Cần nhiều bộ nhớ nếu phạm vi giá trị lớn
+* **Độ phức tạp**: O(n + k) với k là phạm vi giá trị
+* **Ưu điểm**: Rất nhanh khi phạm vi giá trị nhỏ, ổn định
+* **Nhược điểm**: Cần nhiều bộ nhớ nếu phạm vi giá trị lớn
 
 ### 2. Radix Sort (Sắp xếp theo cơ số)
 
@@ -319,9 +337,9 @@ def counting_sort_for_radix(arr, exp):
 # Ví dụ: [170, 45, 75, 90, 2, 802, 24, 66] → [2, 24, 45, 66, 75, 90, 170, 802]
 ```
 
-**Độ phức tạp**: O(d × (n + k)) với d là số chữ số
-**Ưu điểm**: Hiệu quả với số nguyên, ổn định
-**Nhược điểm**: Chỉ áp dụng được với số nguyên và chuỗi
+* **Độ phức tạp**: O(d × (n + k)) với d là số chữ số
+* **Ưu điểm**: Hiệu quả với số nguyên, ổn định
+* **Nhược điểm**: Chỉ áp dụng được với số nguyên và chuỗi
 
 ### 3. Bucket Sort (Sắp xếp thùng)
 
@@ -361,9 +379,9 @@ def bucket_sort(arr):
 # Ví dụ với số thực: [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434]
 ```
 
-**Độ phức tạp**: O(n + k) trung bình, O(n²) trường hợp xấu
-**Ưu điểm**: Hiệu quả với dữ liệu phân bố đều
-**Nhược điểm**: Hiệu suất phụ thuộc vào phân bố dữ liệu
+* **Độ phức tạp**: O(n + k) trung bình, O(n²) trường hợp xấu
+* **Ưu điểm**: Hiệu quả với dữ liệu phân bố đều
+* **Nhược điểm**: Hiệu suất phụ thuộc vào phân bố dữ liệu
 
 ## IV. SO SÁNH VÀ LỰA CHỌN THUẬT TOÁN
 
@@ -382,12 +400,12 @@ def bucket_sort(arr):
 
 ### Hướng dẫn Lựa chọn
 
-**Dữ liệu nhỏ (< 50 phần tử)**: Insertion Sort - đơn giản và hiệu quả
-**Dữ liệu trung bình**: Quick Sort - nhanh trong thực tế
-**Cần ổn định**: Merge Sort - hiệu suất ổn định và bảo toàn thứ tự
-**Bộ nhớ hạn chế**: Heap Sort - sắp xếp tại chỗ với O(n log n)
-**Dữ liệu số nguyên nhỏ**: Counting Sort - cực nhanh
-**Dữ liệu số nguyên lớn**: Radix Sort - hiệu quả với số có nhiều chữ số
+* **Dữ liệu nhỏ (< 50 phần tử)**: Insertion Sort - đơn giản và hiệu quả
+* **Dữ liệu trung bình**: Quick Sort - nhanh trong thực tế
+* **Cần ổn định**: Merge Sort - hiệu suất ổn định và bảo toàn thứ tự
+* **Bộ nhớ hạn chế**: Heap Sort - sắp xếp tại chỗ với O(n log n)
+* **Dữ liệu số nguyên nhỏ**: Counting Sort - cực nhanh
+* **Dữ liệu số nguyên lớn**: Radix Sort - hiệu quả với số có nhiều chữ số
 
 ## V. TIPS VÀ THỰC HÀNH
 
