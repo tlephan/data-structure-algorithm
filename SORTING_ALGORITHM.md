@@ -4,14 +4,12 @@
 
 **Độ phức tạp (complexity) của thuật toán sắp xếp là gì?** Tham khảo Big O Notation.
 
-**Tính ổn định (stability) của thuật toán sắp xếp là gì?** Là khả năng duy trì thứ tự tương đối ban đầu của các phần tử có giá trị bằng nhau sau khi sắp xếp.
+**Tính ổn định (stability) của thuật toán sắp xếp là gì?** Là khả năng duy trì thứ tự tương đối ban đầu của các phần tử có giá trị bằng nhau sau khi sắp xếp. Thuật toán ổn định: Nếu có hai phần tử A và B có cùng giá trị, và A xuất hiện trước B trong mảng gốc, thì sau khi sắp xếp A vẫn sẽ xuất hiện trước B.
 
-Thuật toán ổn định: Nếu có hai phần tử A và B có cùng giá trị, và A xuất hiện trước B trong mảng gốc, thì sau khi sắp xếp A vẫn sẽ xuất hiện trước B.
+Ví dụ minh họa: Mảng ban đầu: `[(3,a), (1,b), (3,c), (2,d)]` (số là giá trị so sánh, chữ cái là định danh)
 
-Ví dụ minh họa: Mảng ban đầu: [(3,a), (1,b), (3,c), (2,d)] (số là giá trị so sánh, chữ cái là định danh)
-
-* Sắp xếp ổn định: [(1,b), (2,d), (3,a), (3,c)] - thứ tự a trước c được giữ nguyên
-* Sắp xếp không ổn định: [(1,b), (2,d), (3,c), (3,a)] - thứ tự a và c bị đảo ngược
+* Sắp xếp ổn định: `[(1,b), (2,d), (3,a), (3,c)]` - thứ tự a trước c được giữ nguyên
+* Sắp xếp không ổn định: `[(1,b), (2,d), (3,c), (3,a)]` - thứ tự a và c bị đảo ngược
 
 **Tại sao tính ổn định quan trọng?**
 Khi sắp xếp theo nhiều tiêu chí (ví dụ: sắp xếp danh sách sinh viên theo điểm, nhưng muốn giữ thứ tự alphabet cho những sinh viên cùng điểm), tính ổn định giúp đảm bảo kết quả sắp xếp nhất quán và có thể dự đoán được.
